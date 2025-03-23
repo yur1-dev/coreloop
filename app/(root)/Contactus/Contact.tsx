@@ -1,6 +1,7 @@
 "use client"; // If using Next.js 13+ app router
 
 import React from "react";
+import Image from "next/image";
 import {
   FaDiscord,
   FaTelegramPlane,
@@ -21,10 +22,12 @@ const PartnerWithUs = () => {
 
       <div className="relative z-10 max-w-2xl w-full text-center">
         {/* Logo */}
-        <img
-          src="hero-img.png"
+        <Image
+          src="/hero-img.png"
           alt="Coreloop Logo"
-          className="w-16 h-16 mx-auto mb-4"
+          width={64} // 16*4 = 64px (w-16 equivalent)
+          height={64} // 16*4 = 64px (h-16 equivalent)
+          className="mx-auto mb-4"
         />
 
         {/* Main Heading */}
@@ -32,8 +35,9 @@ const PartnerWithUs = () => {
 
         {/* Subtext */}
         <p className="text-gray-300 mb-8">
-          We're always on the lookout for innovative partnerships. Let’s join
-          forces to build groundbreaking solutions and drive success together.
+          We&apos;re always on the lookout for innovative partnerships.
+          Let&rsquo;s join forces to build groundbreaking solutions and drive
+          success together.
         </p>
 
         {/* Contact / Social Icons */}

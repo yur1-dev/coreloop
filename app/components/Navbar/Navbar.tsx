@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Navbar: React.FC = () => {
@@ -46,10 +47,12 @@ const Navbar: React.FC = () => {
           {/* Logo / Brand */}
           <div className="flex-shrink-0 flex items-center space-x-2">
             <Link href="/">
-              <img
-                className="h-8 w-auto"
+              <Image
                 src="/coreloop-logo.svg"
                 alt="Coreloop Logo"
+                width={32} // Tailwind h-8 is roughly 32px
+                height={32}
+                className="h-8 w-auto"
               />
             </Link>
           </div>
